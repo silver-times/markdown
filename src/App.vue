@@ -8,7 +8,7 @@
           v-model="markdown"
           placeholder="write here..."
         ></textarea>
-        <div class="box output" rows="10" cols="50">
+        <div :key="markdown" v-markdown class="box output" rows="10" cols="50">
           {{ markdown }}
         </div>
       </div>
@@ -21,7 +21,7 @@ export default {
   name: "App",
   data() {
     return {
-      markdown: "",
+      markdown: "### Hello World!",
     };
   },
 };
