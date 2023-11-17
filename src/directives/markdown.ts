@@ -15,7 +15,7 @@ const rules = [
 
 const markdownDirective: Directive = {
   beforeMount(el: HTMLElement) {
-    let html = el.innerText;
+    let html = el.innerText.replace(/\n/g, "<br>");
     html = html.replace(/\n/g, "<br>");
     rules.forEach(([rule, template]) => {
       html = html.replace(rule, template as string);
