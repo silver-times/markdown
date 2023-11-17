@@ -6,28 +6,14 @@
         <v-btn color="primary" @click="openImageDialog">Image</v-btn>
       </div>
       <div class="boxes">
-        <v-dialog v-model="imageDialog" width="auto">
-          <v-card>
-            <v-card-title>Choose Image</v-card-title>
-            <v-card-text>
-              <v-list>
-                <v-radio-group v-model="selectedImage">
-                  <v-list-item v-for="(image, index) in imageList" :key="index">
-                    <v-radio :label="image" :value="image"></v-radio>
-                  </v-list-item>
-                </v-radio-group>
-              </v-list>
-            </v-card-text>
-            <v-card-actions>
-              <v-btn color="primary" block @click="selectImage"
-                >Select Image</v-btn
-              >
-              <v-btn color="primary" block @click="closeImageDialog"
-                >Close Dialog</v-btn
-              >
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
+        <modal
+          v-if="imageDialog"
+          :dialogVisible="imageDialog"
+          :modalTitle="modalTitle"
+          :items="imageList"
+          @select="selectImage"
+          @close="closeImageDialog"
+        ></modal>
 
         <textarea
           class="box input"
@@ -43,12 +29,18 @@
 </template>
 
 <script lang="ts">
+import Modal from "./components/Modal.vue";
+
 export default {
   name: "App",
+  components: {
+    Modal,
+  },
   data() {
     return {
       markdown: "### Hello World!",
       imageDialog: false,
+      modalTitle: "Select Image",
       imageList: [
         "https://wallpapers.com/images/featured/sunrise-6tlr4cfeg3q0al8n.jpg",
         "Image 2",
@@ -64,10 +56,9 @@ export default {
     closeImageDialog() {
       this.imageDialog = false;
     },
-    selectImage() {
-      if (this.selectedImage) {
-        console.log("Selected Image:", this.selectedImage);
-        this.markdown += `\n![${this.selectedImage}](${this.selectedImage})`;
+    selectImage(selectedImage: string) {
+      if (selectedImage) {
+        this.markdown += `\n![${selectedImage}](${selectedImage})`;
       }
       this.imageDialog = false;
     },
