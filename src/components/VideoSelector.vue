@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-btn color="primary" @click="openVideoDialog">Video</v-btn>
+    <li class="linkStyle" @click="openVideoDialog">Video</li>
     <modal
       v-if="videoDialog"
       :dialogVisible="videoDialog"
@@ -46,3 +46,12 @@ export default {
   },
 };
 </script>
+
+<style>
+.linkStyle {
+  text-decoration: none;
+  all: unset;
+  cursor: pointer;
+  color: black;
+}
+</style>

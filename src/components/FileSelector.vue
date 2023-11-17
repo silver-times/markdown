@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-btn color="primary" @click="openFileDialog">Select File</v-btn>
+    <li class="linkStyle" @click="openFileDialog">File</li>
     <modal
       v-if="fileDialog"
       :dialogVisible="fileDialog"
@@ -46,3 +46,12 @@ export default {
   },
 };
 </script>
+
+<style>
+.linkStyle {
+  text-decoration: none;
+  all: unset;
+  cursor: pointer;
+  color: black;
+}
+</style>

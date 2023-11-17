@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-btn color="primary" @click="openImageDialog">Image</v-btn>
+    <li class="linkStyle" @click="openImageDialog">Image</li>
     <modal
       v-if="imageDialog"
       :dialogVisible="imageDialog"
@@ -50,3 +50,12 @@ export default {
   },
 };
 </script>
+
+<style>
+.linkStyle {
+  text-decoration: none;
+  all: unset;
+  cursor: pointer;
+  color: black;
+}
+</style>
