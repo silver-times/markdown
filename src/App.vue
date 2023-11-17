@@ -2,11 +2,10 @@
   <v-container>
     <v-responsive class="align-center text-center">
       <h1>Markdown!</h1>
+      <div class="modals">
+        <v-btn color="primary" @click="openImageDialog">Image</v-btn>
+      </div>
       <div class="boxes">
-        <v-btn color="primary" @click="openImageDialog"
-          >Open Image Dialog</v-btn
-        >
-
         <v-dialog v-model="imageDialog" width="auto">
           <v-card>
             <v-card-title>Choose Image</v-card-title>
@@ -50,7 +49,11 @@ export default {
     return {
       markdown: "### Hello World!",
       imageDialog: false,
-      imageList: ["Image 1", "Image 2", "Image 3"],
+      imageList: [
+        "https://wallpapers.com/images/featured/sunrise-6tlr4cfeg3q0al8n.jpg",
+        "Image 2",
+        "Image 3",
+      ],
       selectedImage: null,
     };
   },
@@ -113,5 +116,12 @@ h1 {
   white-space: pre-line;
   padding: 10px;
   text-align: left;
+}
+
+.modals {
+  display: flex;
+  justify-content: start;
+  margin-top: 20px;
+  gap: 10px;
 }
 </style>

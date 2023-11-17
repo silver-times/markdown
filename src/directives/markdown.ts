@@ -11,6 +11,7 @@ const rules = [
   [/\*([^\n]+)\*/g, "<em>$1</em>"],
   [/_([^\n]+)_/gm, "<u>$1</u>"],
   [/^\s*[-*]\s+([^\n]+)/gm, "<ul>\n<li>$1</li>\n</ul>"],
+  [/(?:!\[([^\]]+)\]\(([^)]+)\))/g, '<img alt="$1" src="$2" />'],
 ];
 
 const markdownDirective: Directive = {
