@@ -3,18 +3,22 @@
     <v-responsive class="align-center text-center">
       <h1>Markdown!</h1>
       <div class="modals">
-        <v-btn color="primary" @click="openImageDialog">Image</v-btn>
+        <image-selector
+          :markdown="markdown"
+          @selectImage="selectMedia"
+        ></image-selector>
+
+        <video-selector
+          :markdown="markdown"
+          @selectVideo="selectVideo"
+        ></video-selector>
+
+        <file-selector
+          :markdown="markdown"
+          @selectFile="selectFile"
+        ></file-selector>
       </div>
       <div class="boxes">
-        <modal
-          v-if="imageDialog"
-          :dialogVisible="imageDialog"
-          :modalTitle="modalTitle"
-          :items="imageList"
-          @select="selectImage"
-          @close="closeImageDialog"
-        ></modal>
-
         <textarea
           class="box input"
           v-model="markdown"
@@ -29,42 +33,42 @@
 </template>
 
 <script lang="ts">
-import Modal from "./components/Modal.vue";
+import ImageSelector from "./components/ImageSelector.vue";
+import VideoSelector from "./components/VideoSelector.vue";
+import FileSelector from "./components/FileSelector.vue";
 
 export default {
   name: "App",
   components: {
-    Modal,
+    ImageSelector,
+    VideoSelector,
+    FileSelector,
   },
   data() {
     return {
-      markdown: "### Hello World!",
-      imageDialog: false,
-      modalTitle: "Select Image",
-      imageList: [
-        "https://wallpapers.com/images/featured/sunrise-6tlr4cfeg3q0al8n.jpg",
-        "Image 2",
-        "Image 3",
-      ],
-      selectedImage: null,
+      markdown: "",
     };
   },
   methods: {
-    openImageDialog() {
-      this.imageDialog = true;
-    },
-    closeImageDialog() {
-      this.imageDialog = false;
-    },
-    selectImage(selectedImage: string) {
-      if (selectedImage) {
-        this.markdown += `\n![${selectedImage}](${selectedImage})`;
+    selectMedia(selectedMedia: string) {
+      if (selectedMedia) {
+        this.markdown += `\n![${selectedMedia}](${selectedMedia})`;
       }
-      this.imageDialog = false;
+    },
+    selectVideo(selectedMedia: string) {
+      if (selectedMedia) {
+        this.markdown += `\n[video ${selectedMedia}](${selectedMedia})`;
+      }
+    },
+    selectFile(selectedMedia: string) {
+      if (selectedMedia) {
+        this.markdown += `\n[file ${selectedMedia}](${selectedMedia})`;
+      }
     },
   },
 };
 </script>
+
 <style scoped>
 h1 {
   text-align: center;
