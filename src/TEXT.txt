@@ -20,9 +20,9 @@ This is a [link](https://www.exemplar.com)
 [row][col-left]Content in the left column[/col-left][col-right]Content in the right column[/col-right][/row]
 [/table]
 
-Below is the image for **Vuetify** logo:
+Below is the **Vuetify's** logo:
 ![https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-dark-atom.svg](https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-dark-atom.svg)
 
-Check out it's documentation here: [link](https://vuetifyjs.com/en/getting-started/installation)
+Check out its documentation here: [link](https://vuetifyjs.com/en/getting-started/installation)
 
-Crafted with :heart: by Rajat for Pixelfield.
+Crafted with :heart: by Rajat for **Pixelfield**.

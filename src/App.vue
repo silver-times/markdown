@@ -107,7 +107,6 @@ export default {
   width: 80%;
   display: flex;
   justify-content: start;
-
   padding-bottom: 10px;
   margin-left: 20px;
   gap: 20px;
@@ -156,6 +155,10 @@ export default {
   all: unset;
   cursor: pointer;
   color: #999ea2;
+}
+
+.linkStyle:hover {
+  color: #333d45;
 }
 
 textarea:focus {

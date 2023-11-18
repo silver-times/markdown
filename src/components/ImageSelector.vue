@@ -28,9 +28,11 @@ export default {
       imageDialog: false,
       modalTitle: "Select Image",
       imageList: [
-        "https://wallpapers.com/images/featured/sunrise-6tlr4cfeg3q0al8n.jpg",
+        "https://media-be.chewy.com/wp-content/uploads/2022/09/27100424/cavalier-king-charles-spaniel-cute-dogs.jpg",
         "https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-dark-atom.svg",
-        "Image 3",
+        "https://e0.pxfuel.com/wallpapers/408/100/desktop-wallpaper-cute-dog-golden-dog-little-puppy.jpg",
+        "Image 4",
+        "Image 5",
       ],
     };
   },

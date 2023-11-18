@@ -31,6 +31,8 @@ export default {
         "https://www.example.com/video1.mp4",
         "https://www.youtube.com/watch?v=nhBVL41-_Cw",
         "Video 3",
+        "Video 4",
+        "Video 5",
       ],
     };
   },

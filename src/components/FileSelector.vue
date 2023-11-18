@@ -27,7 +27,7 @@ export default {
     return {
       fileDialog: false,
       modalTitle: "Select File",
-      fileList: ["File 1", "File 2", "File 3"],
+      fileList: ["File 1", "File 2", "File 3", "File 4", "File 5"],
     };
   },
   methods: {
