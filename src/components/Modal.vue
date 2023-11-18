@@ -27,11 +27,14 @@ export default {
       required: true,
     },
     modalTitle: String,
-    items: Array,
+    items: {
+      type: Array as () => string[],
+      required: true,
+    },
   },
   data() {
     return {
-      selectedValue: null,
+      selectedValue: null as string | null,
     };
   },
   methods: {

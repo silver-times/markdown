@@ -60,7 +60,6 @@ export default {
     ImageSelector,
     VideoSelector,
     FileSelector,
-    TEXT,
   },
   data() {
     return {
