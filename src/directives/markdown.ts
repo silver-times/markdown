@@ -71,6 +71,10 @@ const rules: Rule[] = [
     pattern: /:heart:/g,
     template: () => '<span class="heart">&#10084;</span>',
   },
+  {
+    pattern: /^\s*-\s+([^\n]+)/gm,
+    template: (_, content) => `<li>${content}</li>`,
+  },
 ];
 
 const markdownDirective: Directive = {
