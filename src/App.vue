@@ -52,6 +52,7 @@
 import ImageSelector from "./components/ImageSelector.vue";
 import VideoSelector from "./components/VideoSelector.vue";
 import FileSelector from "./components/FileSelector.vue";
+import TEXT from "./TEXT.md?raw";
 
 export default {
   name: "App",
@@ -59,12 +60,14 @@ export default {
     ImageSelector,
     VideoSelector,
     FileSelector,
+    TEXT,
   },
   data() {
     return {
-      markdown: "",
+      markdown: TEXT,
     };
   },
+
   methods: {
     selectMedia(selectedMedia: string) {
       if (selectedMedia) {
