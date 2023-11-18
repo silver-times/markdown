@@ -52,7 +52,7 @@
 import ImageSelector from "./components/ImageSelector.vue";
 import VideoSelector from "./components/VideoSelector.vue";
 import FileSelector from "./components/FileSelector.vue";
-import TEXT from "./TEXT.md?raw";
+import TEXT from "./TEXT.txt?raw";
 
 export default {
   name: "App",
@@ -90,11 +90,13 @@ export default {
 
 <style scoped>
 .content {
+  width: 75vw;
   border: 1px solid black;
   padding: 40px;
   background-color: #fff;
 }
 .writable {
+  width: 100%;
   display: flex;
   flex-direction: column;
   border: 1px solid black;
@@ -102,6 +104,7 @@ export default {
 }
 
 .modals {
+  width: 80%;
   display: flex;
   justify-content: start;
   margin-top: 20px;
@@ -109,7 +112,6 @@ export default {
   margin-left: 20px;
   gap: 20px;
   border-bottom: 1px solid black;
-  width: 80%;
 }
 
 h1 {
@@ -119,20 +121,18 @@ h1 {
 }
 
 .box {
-  width: 75vw;
-  height: 50vh;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 1rem;
   font-size: 1rem;
   font-family: "Roboto Mono", monospace;
   resize: none;
+  height: 50vh;
 }
 
 .input {
   background-color: #fff;
   color: black;
-
   margin-top: 20px;
 }
 
@@ -147,6 +147,7 @@ h1 {
   padding: 10px;
   text-align: left;
   margin-top: 20px;
+  height: auto;
 }
 
 .linkStyle {
