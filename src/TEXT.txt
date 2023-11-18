@@ -1,24 +1,10 @@
-# Header 1
-
-## Header 2
-
-### Header 3
-
-Lorem ipsum sit amet.
-
-**bold** *italic* _underline_
-
-This is a link [link](https://www.exemplar.com)
-
-[img](https://www.exemplar.com/img.jpg)
-
-[col-left][img](https://www.exemplar.com/img.jpg)[/col-left][col-right][img](https://www.exemplar.com/img.jpg)[/col-right]
 
 [table]
-[row][col-left] **Make it bold* [/col-left][col-right] *Make it bold** [/col-right][/row]
+[row][col-left] **Make it bold** [/col-left][col-right] **Make it bold** [/col-right][/row]
 [row][col-left]Content in the left column[/col-left][col-right]Content in the right column[/col-right][/row]
 [row][col-left]Content in the left column[/col-left][col-right]Content in the right column[/col-right][/row]
 [/table]
 
+**bold**
 
-
+normal text

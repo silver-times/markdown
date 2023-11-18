@@ -7,14 +7,32 @@ const rules = [
   [/###\s?([^\n]+)/g, "<h3>$1</h3>\n"],
   [/##\s?([^\n]+)/g, "<h2>$1</h2>\n"],
   [/#\s?([^\n]+)/g, "<h1>$1</h1>\n"],
-  [/\*\*([^\n]+)\*\*/g, "<strong>$1</strong>"],
-  [/\*([^\n]+)\*/g, "<em>$1</em>"],
-  [/_([^\n]+)_/gm, "<u>$1</u>\n"],
+
   [/(?:!\[([^\]]+)\]\(([^)]+)\))/g, '<img alt="$1" src="$2" />'],
   [
     /\[video\s+([^\]]+)\]\(([^)]+)\)/g,
     '<video controls alt="$1" src="$2"></video>',
   ],
+  [/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>'],
+
+  [
+    /\[row\](?:\[col-left\]([^\]]+)\[\/col-left\]\[col-right\]([^\]]+)\[\/col-right\])+\[\/row\]/g,
+    "<tr><td>$1$2</td></tr>",
+  ],
+  [
+    /\[col-left\]([^\]]+)\[\/col-left\]/g,
+    '<div style="display: inline-block; margin-right: 10px;">$1</div>',
+  ],
+  [
+    /\[col-right\]([^\]]+)\[\/col-right\]/g,
+    '<div style="display: inline-block;">$1</div>',
+  ],
+  [
+    /\*\*([^*]+)\*\*/gm,
+    (match: any, content: any) => `<strong>${content}</strong>`,
+  ],
+  [/\*([^\n]+)\*/g, "<em>$1</em>"],
+  [/_([^\n]+)_/gm, "<u>$1</u>\n"],
 ];
 
 const markdownDirective: Directive = {

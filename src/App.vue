@@ -127,7 +127,7 @@ h1 {
   font-size: 1rem;
   font-family: "Roboto Mono", monospace;
   resize: none;
-  height: 50vh;
+  min-height: 40vh;
 }
 
 .input {
