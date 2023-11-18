@@ -2,7 +2,7 @@
   <v-container>
     <v-responsive class="align-center text-center">
       <div class="content">
-        <h1>Content</h1>
+        <h1 class="heading">Content</h1>
         <div class="writable">
           <div class="modals">
             <image-selector
@@ -88,10 +88,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .content {
   width: 75vw;
-  border: 1px solid black;
+  border: 1px solid #e0e2e3;
   padding: 40px;
   background-color: #fff;
 }
@@ -99,7 +99,7 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #e0e2e3;
   padding: 20px;
 }
 
@@ -107,21 +107,21 @@ export default {
   width: 80%;
   display: flex;
   justify-content: start;
-  margin-top: 20px;
+
   padding-bottom: 10px;
   margin-left: 20px;
   gap: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #e0e2e3;
 }
 
-h1 {
+.heading {
   text-align: start;
   font-weight: 700;
   margin-bottom: 40px;
+  color: #333d45;
 }
 
 .box {
-  border: 1px solid #ccc;
   border-radius: 5px;
   padding: 1rem;
   font-size: 1rem;
@@ -134,6 +134,7 @@ h1 {
   background-color: #fff;
   color: black;
   margin-top: 20px;
+  border-bottom: 1px solid #e0e2e3;
 }
 
 .input::placeholder {
@@ -154,10 +155,15 @@ h1 {
   text-decoration: none;
   all: unset;
   cursor: pointer;
-  color: black;
+  color: #999ea2;
 }
 
 textarea:focus {
   outline: none;
+}
+
+.heart {
+  color: purple;
+  font-size: 1.6em;
 }
 </style>

@@ -29,7 +29,7 @@ export default {
       modalTitle: "Select Image",
       imageList: [
         "https://wallpapers.com/images/featured/sunrise-6tlr4cfeg3q0al8n.jpg",
-        "Image 2",
+        "https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-dark-atom.svg",
         "Image 3",
       ],
     };
@@ -50,12 +50,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.linkStyle {
-  text-decoration: none;
-  all: unset;
-  cursor: pointer;
-  color: black;
-}
-</style>

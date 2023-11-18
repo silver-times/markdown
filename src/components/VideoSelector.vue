@@ -27,7 +27,11 @@ export default {
     return {
       videoDialog: false,
       modalTitle: "Select Video",
-      videoList: ["https://www.example.com/video1.mp4", "Video 2", "Video 3"],
+      videoList: [
+        "https://www.example.com/video1.mp4",
+        "https://www.youtube.com/watch?v=nhBVL41-_Cw",
+        "Video 3",
+      ],
     };
   },
   methods: {
@@ -46,12 +50,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.linkStyle {
-  text-decoration: none;
-  all: unset;
-  cursor: pointer;
-  color: black;
-}
-</style>

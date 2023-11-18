@@ -46,12 +46,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.linkStyle {
-  text-decoration: none;
-  all: unset;
-  cursor: pointer;
-  color: black;
-}
-</style>
